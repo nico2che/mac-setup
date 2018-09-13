@@ -18,3 +18,4 @@ applications:
   - vim
   - neovim
   - node
+  - blacktop/tap/lporg

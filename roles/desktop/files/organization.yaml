@@ -1,0 +1,96 @@
+apps:
+  pages:
+  - number: 1
+    items:
+    - folder: Productivité
+      pages:
+      - number: 1
+        items:
+        - Safari
+        - Contacts
+        - Calendrier
+        - Rappels
+        - Notes
+        - Plans
+        - Messages
+        - FaceTime
+        - Photo Booth
+        - Photos
+        - iMovie
+        - GarageBand
+        - Keynote
+        - Aperçu
+        - Dictionnaire
+        - Siri
+        - iTunes
+        - iBooks
+        - Pages
+        - Numbers
+        - Mission Control
+      - number: 2
+        items:
+        - Dashboard
+    - folder: Autre
+      pages:
+      - number: 1
+        items:
+        - QuickTime Player
+        - TextEdit
+        - Grapher
+        - Lecteur DVD
+        - Time Machine
+        - Livre des polices
+        - Échecs
+        - Aide-mémoire
+        - Transfert d’images
+        - Utilitaire VoiceOver
+        - Utilitaire AirPort
+        - Assistant migration
+        - Terminal
+        - Moniteur d’activité
+        - Console
+        - Trousseaux d’accès
+        - Informations système
+        - Automator
+        - Éditeur de script
+        - Utilitaire de disque
+        - Assistant Boot Camp
+      - number: 2
+        items:
+        - Colorimètre numérique
+        - Utilitaire ColorSync
+        - Capture
+        - Échange de fichiers Bluetooth
+        - Configuration audio et MIDI
+    - Mail
+    - Calculette
+    - App Store
+    - Préférences Système
+    - VMware AirWatch Agent
+    - Google Chrome
+    - iTerm
+    - Docker
+    - IntelliJ IDEA
+    - Visual Studio Code
+    - Google Keep – Notes et listes
+    - Skype
+    - Postman
+    - OmniDiskSweeper
+    - VLC
+    - HWMonitor
+    - FileZilla
+widgets:
+  pages: []
+dock_items:
+- Launchpad
+- Google Chrome
+- Mail
+- Calendrier
+- Visual Studio Code
+- IntelliJ IDEA
+- App Store
+- Préférences Système
+- iTerm
+- ============
+- Téléchargements
+desktop: {}
