@@ -1,0 +1,20 @@
+---
+# list of applications to install
+general:
+  local_home: "{{ lookup('env','HOME') }}"
+
+# homebrew applications
+applications:
+  - autojump
+  - git
+  - tree
+  - httpie
+  - curl
+  - wget
+  - kubectl
+  - kubernetes-helm
+  - zsh
+  - go
+  - vim
+  - neovim
+  - node
