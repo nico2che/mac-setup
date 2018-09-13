@@ -1,0 +1,9 @@
+{
+    "sync.gist": "30d7736311598f055b0d863a2f68acc3",
+    "sync.quietSync": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.forceDownload": false
+}

@@ -1,0 +1,8 @@
+---
+- name: vscode - install vscode sync extension
+  shell: '/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension Shan.code-settings-sync'
+
+- name: vscode - install vscode preferences
+  copy:
+    src: '{{ role_path }}/files/vscode-settings.json'
+    dest: '~/Library/Application Support/Code/User/settings.json'

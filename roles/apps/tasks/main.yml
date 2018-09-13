@@ -1,2 +1,6 @@
+---
 - name: application installs
   include: apps.yml
+
+- name: preferences installs
+  include: preferences.yml
