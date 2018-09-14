@@ -12,7 +12,7 @@ These roles are dependants, so they need to be runned in this order only.
 
 When all roles was runned, you can start one independantly with a tag option.
 
-- **setup** install 
+- **setup** install homebrew & global npm packages
 - **apps** install mac applications and their preferences
 - **desktop** install global preferences
 
