@@ -27,8 +27,6 @@ apps:
         - Pages
         - Numbers
         - Mission Control
-      - number: 2
-        items:
         - Dashboard
     - folder: Autre
       pages:
@@ -55,8 +53,6 @@ apps:
         - Éditeur de script
         - Utilitaire de disque
         - Assistant Boot Camp
-      - number: 2
-        items:
         - Colorimètre numérique
         - Utilitaire ColorSync
         - Capture
@@ -66,7 +62,6 @@ apps:
     - Calculette
     - App Store
     - Préférences Système
-    - VMware AirWatch Agent
     - Google Chrome
     - iTerm
     - Docker
