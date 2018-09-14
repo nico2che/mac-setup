@@ -19,3 +19,4 @@ applications:
   - neovim
   - node
   - blacktop/tap/lporg
+  - yadm
