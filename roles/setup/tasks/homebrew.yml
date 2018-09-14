@@ -1,6 +1,5 @@
 ---
 # install and update homebrew and cask
-
 - name: install homebrew
   shell: 'yes | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"' 
   args:
@@ -23,6 +22,6 @@
 # install all basics commands from homebrew
 - name: start installing homebrew applications
   homebrew:
-    name: "{{item}}"
+    name: "{{ item }}"
     state: latest
-  with_items: "{{applications}}"
+  with_items: "{{ homebrew }}"

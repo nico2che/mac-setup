@@ -1,2 +1,5 @@
 - name: homebrew installation
   include: homebrew.yml
+
+- name: npm installation
+  include: npm.yml

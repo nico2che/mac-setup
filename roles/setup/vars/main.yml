@@ -4,7 +4,7 @@ general:
   local_home: "{{ lookup('env','HOME') }}"
 
 # homebrew applications
-applications:
+homebrew:
   - autojump
   - git
   - tree
@@ -20,3 +20,9 @@ applications:
   - node
   - blacktop/tap/lporg
   - yadm
+
+# npm global packages
+# - npm
+# - { name: npm, state: present, version: "^4.0.0" }
+npm:
+  - git-open
