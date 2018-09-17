@@ -17,6 +17,7 @@ cask_applications:
   - visual-studio-code
   - filezilla
   - intellij-idea
+  - aerial
 
 downloads:
   #  zwift:
