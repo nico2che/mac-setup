@@ -18,6 +18,7 @@ cask_applications:
   - filezilla
   - intellij-idea
   - aerial
+  - onedrive
 
 downloads:
   #  zwift:
