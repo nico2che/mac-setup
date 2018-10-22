@@ -21,6 +21,7 @@ homebrew:
   - blacktop/tap/lporg
   - yadm
   - mkcert
+  - mongodb
 
 # npm global packages
 # - npm
