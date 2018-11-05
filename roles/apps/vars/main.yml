@@ -5,6 +5,7 @@ general:
 
 # homebrew cask applications
 cask_applications:
+  - java
   - google-chrome
   - iterm2
   - docker-edge

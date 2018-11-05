@@ -1,11 +1,10 @@
----
 # install and update homebrew and cask
 - name: install homebrew
-  shell: 'yes | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"' 
+  shell: 'yes | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
   args:
     creates: /usr/local/bin/brew
 
-- name: ensure homebrew is updated 
+- name: ensure homebrew is updated
   homebrew:
     state: latest
     update_homebrew: yes
@@ -14,7 +13,12 @@
   homebrew_tap:
     tap: "homebrew/cask"
 
-- name: tap homebrew neovim/homebrew-neovim 
+- name: ensure java is installed
+  homebrew_cask:
+    name: java
+    state: installed
+
+- name: tap homebrew neovim/homebrew-neovim
   homebrew_tap:
     tap: "neovim/homebrew-neovim"
     state: present
