@@ -23,6 +23,7 @@ homebrew:
   - mkcert
   - mongodb
   - tig
+  - maven
 
 # npm global packages
 # - npm
