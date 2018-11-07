@@ -24,6 +24,10 @@ homebrew:
   - mongodb
   - tig
   - maven
+  - ripgrep
+  - exa
+  - bat
+  - fd
 
 # npm global packages
 # - npm
