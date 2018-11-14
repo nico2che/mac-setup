@@ -13,9 +13,6 @@ inventory = ./hosts
 # ignore ssh authenticity
 host_key_checking = False
 
-# location of vault password file
-# vault_password_file = vault_passwd
-
 [ssh_connection]
 pipelining = True
 control_path = /tmp/ansible-ssh-%%h-%%p-%%r

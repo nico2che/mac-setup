@@ -5,21 +5,28 @@ general:
 
 # homebrew cask applications
 cask_applications:
-  - java
-  - google-chrome
-  - iterm2
-  - docker-edge
-  - skype
-  - omnidisksweeper
-  - vlc
-  - postman
-  - google-backup-and-sync
-  - hwsensors
-  - visual-studio-code
-  - filezilla
-  - intellij-idea
-  - aerial
-  - onedrive
+  all:
+    - google-chrome
+    - keka
+    - firefox
+    - intellij-idea
+    - aerial
+    - onedrive
+    - java
+    - iterm2
+    - docker-edge
+    - omnidisksweeper
+    - vlc
+    - postman
+    - google-backup-and-sync
+    - hwsensors
+    - visual-studio-code
+  pro:
+    - zeplin
+    - skype
+  perso:
+    - android-studio
+    - filezilla
 
 downloads:
   #  zwift:
