@@ -5,7 +5,7 @@ echo "===          Setting up Mac             ==="
 echo "==========================================="
 
 sudo easy_install pip
-sudo easy_install ansible
+sudo pip install ansible
 
 installdir="/tmp/setupmac-$RANDOM"
 mkdir $installdir
