@@ -13,3 +13,4 @@
   script: "{{ lookup('env', 'HOME') }}/pointfichiers/install.sh"
   args:
     chdir: "{{ lookup('env', 'HOME') }}/pointfichiers"
+  ignore_errors: yes
