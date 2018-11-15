@@ -3,3 +3,6 @@
 
 - name: npm installation
   include: npm.yml
+
+- name: dotfiles installation
+  include: dotfiles.yml

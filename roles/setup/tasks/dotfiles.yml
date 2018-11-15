@@ -1,0 +1,15 @@
+- name: Clone pointfichiers repo
+  git:
+    repo: https://github.com/nico2che/pointfichiers
+    dest: "{{ lookup('env', 'HOME') }}/pointfichiers"
+    version: cacd2
+
+- name: Set exec right on installation file
+  file:
+    path: "{{ lookup('env', 'HOME') }}/pointfichiers/install.sh"
+    mode: +x
+
+- name: Install pointfichiers
+  script: "{{ lookup('env', 'HOME') }}/pointfichiers/install.sh"
+  args:
+    chdir: "{{ lookup('env', 'HOME') }}/pointfichiers"
