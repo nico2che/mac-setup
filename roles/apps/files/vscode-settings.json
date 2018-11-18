@@ -15,5 +15,6 @@
   "gitlens.hovers.enabled": false,
   "git.confirmSync": false,
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "git.autofetch": true
 }
