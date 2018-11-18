@@ -28,6 +28,7 @@ homebrew:
   - exa
   - bat
   - fd
+  - htop
 
 # npm global packages
 # - npm
