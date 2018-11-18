@@ -26,6 +26,5 @@
 # install all basics commands from homebrew
 - name: start installing homebrew applications
   homebrew:
-    name: "{{ item }}"
+    name: "{{ homebrew }}"
     state: latest
-  with_items: "{{ homebrew }}"
