@@ -29,6 +29,7 @@ homebrew:
   - bat
   - fd
   - htop
+  - nmap
 
 # npm global packages
 # - npm
