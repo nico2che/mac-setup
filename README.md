@@ -25,6 +25,7 @@ environments type
 
 ## Coming
 
-- add dotfiles perso repo
 - aerial save screener
 - google drive auto connexion, and sync some files
+
+Inspired from https://github.com/geerlingguy/mac-dev-playbook
