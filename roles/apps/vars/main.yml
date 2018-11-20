@@ -23,6 +23,7 @@ cask_applications:
   pro:
     - zeplin
     - skype
+    - ngrok
   perso:
     - android-studio
     - filezilla
