@@ -7,7 +7,6 @@ cask_applications:
   all:
     - google-chrome
     - keka
-    - firefox-developer-edition
     - intellij-idea
     - aerial
     - onedrive
@@ -24,6 +23,7 @@ cask_applications:
     - zeplin
     - skype
     - ngrok
+    - firefox-developer-edition
   perso:
     - android-studio
     - filezilla
