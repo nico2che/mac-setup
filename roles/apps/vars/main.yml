@@ -7,7 +7,7 @@ cask_applications:
   all:
     - google-chrome
     - keka
-    - firefox
+    - firefox-developer-edition
     - intellij-idea
     - aerial
     - onedrive
