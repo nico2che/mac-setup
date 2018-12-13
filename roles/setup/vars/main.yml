@@ -18,7 +18,6 @@ homebrew:
   - vim
   - neovim
   - node
-  - blacktop/tap/lporg
   - yadm
   - mkcert
   - mongodb
