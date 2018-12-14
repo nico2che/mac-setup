@@ -7,5 +7,3 @@
       tags: ['setup']
     - role: apps
       tags: ['apps']
-    - role: desktop
-      tags: ['desktop']
