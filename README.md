@@ -14,11 +14,10 @@ These roles are dependants, so they need to be runned in this order only.
 
 When all roles was runned, you can start one independantly with a tag option.
 
-`ansible-playbook playbook.yml --tags=setup,apps,desktop -e 'perso=yes pro=yes'`
+`ansible-playbook main.yml --tags=setup,apps -e 'perso=yes pro=yes'`
 
 - **setup** install homebrew & global npm packages
 - **apps** install mac applications and their preferences
-- **desktop** install global preferences
 
 `perso` and `pro` extra vars are available on playbook command to install these
 environments type
