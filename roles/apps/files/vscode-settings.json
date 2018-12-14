@@ -16,5 +16,6 @@
   "git.confirmSync": false,
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline"
 }
