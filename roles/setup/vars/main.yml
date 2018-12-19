@@ -29,6 +29,7 @@ homebrew:
   - fd
   - htop
   - nmap
+  - jiq
 
 # npm global packages
 # - npm
