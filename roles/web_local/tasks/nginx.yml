@@ -1,0 +1,8 @@
+---
+- name: Add nginx configuration for {{ item.name }}
+  template:
+    src: https.conf.j2
+    dest: /usr/local/etc/nginx/servers/{{ item.url }}.conf
+    owner: nicolas
+    group: admin
+    mode: 0644

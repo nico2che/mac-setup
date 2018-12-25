@@ -1,0 +1,44 @@
+---
+- name: Install MySQL-Python module
+  pip:
+    name: "{{ item }}"
+    state: forcereinstall
+  with_items:
+    - pip
+    - MySQL-python
+
+- name: Create MySQL databases
+  mysql_db:
+    login_user: root
+    login_password: ~
+    name: "{{ item.db }}"
+    state: present
+  when: "item.db is defined"
+  loop: "{{ websites }}"
+
+- name: Create MySQL users
+  mysql_user:
+    login_user: root
+    login_password: ~
+    name: "{{ item.db }}"
+    password: "{{ item.db }}"
+    priv: "{{ item.db }}.*:ALL"
+    host: '%'
+    state: present
+  when: "item.db is defined"
+  loop: "{{ websites }}"
+
+- name: Download archives
+  unarchive:
+    src: "{{ item.zip }}"
+    dest: "{{ item.path }}"
+    remote_src: yes
+  when: "item.zip is defined"
+  loop: "{{ websites }}"
+
+- name: Clone repos
+  git:
+    src: "{{ item.git }}"
+    dest: "{{ item.path }}"
+  when: "item.git is defined"
+  loop: "{{ websites }}"

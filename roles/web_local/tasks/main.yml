@@ -1,0 +1,30 @@
+---
+- name: Install pre-requirements
+  homebrew:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - nginx
+      - nss
+      - mkcert
+      - mysql
+
+# - name: Install SSL certs
+#   include: mkcert.yml
+
+# - name: Install nginx
+#   include: nginx.yml
+#   loop: "{{ websites }}"
+
+# - name: Restart nginx
+#   become: true
+#   shell: brew services restart nginx
+
+- name: Install DBs and PMA
+  include: db.yml
+
+# - name: Install monsieursinge website
+#   include: mrsinge.yml
+#   vars:
+#     project_path: /Users/nicolas/projects/mrsinge
