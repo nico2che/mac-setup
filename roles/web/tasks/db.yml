@@ -1,0 +1,66 @@
+---
+- name: Create local SQL volume
+  docker_volume:
+      name: local_db
+      state: present
+
+- name: Start MySQL server
+  docker_container:
+    name: mysql
+    image: mariadb
+    volumes:
+      - local_db:/var/lib/mysql
+    env:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+
+- name: Add MySQL container to inventory
+  add_host:
+    name: mysql
+    ansible_connection: docker
+  changed_when: false
+
+- name: Work in MariaDB Docker container
+  delegate_to: mysql
+  block:
+    - name: Install python to use Ansible on container
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python)
+
+    - name: Install required packages
+      apt:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+          - python
+          - python-pip
+          - libmysqlclient-dev
+
+    - name: Install MySQL-Python module
+      pip:
+        name: MySQL-python
+
+    - name: Create MySQL databases
+      mysql_db:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ dbs }}"
+
+    - name: Create MySQL users
+      mysql_user:
+        login_user: root
+        login_password: ~
+        name: "{{ item }}"
+        password: "{{ item }}"
+        priv: "{{ item }}.*:ALL"
+        state: present
+        host: '%'
+      loop: "{{ dbs }}"
+
+- name: start phpmyadmin container for PHP/MySQL app
+  docker_container:
+    name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql:db
+    env:
+      VIRTUAL_HOST: phpmyadmin.local

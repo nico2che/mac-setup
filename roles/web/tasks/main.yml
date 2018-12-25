@@ -1,0 +1,33 @@
+- name: Install pre-requirements
+  homebrew:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - nginx
+      - dnsmasq
+      - nss
+      - mkcert
+
+- name: Install SSL certs
+  include: mkcert.yml
+  vars:
+    domains:
+      - phpmyadmin
+      - monsieursinge
+      - chevigne
+      - nicolas.chevigne
+
+- name: Install nginx proxy
+  include: nginx.yml
+
+- name: Install DBs and PMA
+  include: db.yml
+  vars:
+    dbs:
+      - mrsinge
+
+- name: Install monsieursinge website
+  include: mrsinge.yml
+  vars:
+    project_path: /Users/nicolas/projects/mrsinge

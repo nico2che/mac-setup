@@ -1,0 +1,16 @@
+---
+# TODO: condition
+- name: Init mkcert
+  command: mkcert -install
+
+- command: mkcert -CAROOT
+  register: cert_path
+
+- name: Create SSL certificates
+  shell: |
+    mkcert {{ item }}.local
+    mv {{ item }}.local-key.pem {{ item }}.local.key
+    mv {{ item }}.local.pem {{ item }}.local.crt
+  args:
+    chdir: "{{ cert_path.stdout }}"
+  loop: "{{ domains }}"
