@@ -1,0 +1,28 @@
+---
+- name: Download wordpress cli
+  get_url:
+    url: https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+    dest: /usr/local/bin/wp
+    mode: +x
+
+- name: Initialize wordpress
+  shell: |
+    wp core download \
+      --path={{ item.path }} \
+      --locale=fr_FR \
+      --skip-content \
+      --force
+  when: "item.wordpress is defined"
+  loop: "{{ websites }}"
+
+- name: Configure wordpress
+  shell: |
+    wp config create \
+      --path={{ item.path }} \
+      --dbname={{ item.db }} \
+      --dbuser={{ item.db }} \
+      --dbpass={{ item.db }} \
+      --locale=fr_FR \
+      --force
+  when: "item.wordpress is defined"
+  loop: "{{ websites }}"

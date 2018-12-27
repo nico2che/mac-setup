@@ -2,10 +2,9 @@
 - name: Install MySQL-Python module
   pip:
     name: "{{ item }}"
-    state: forcereinstall
   with_items:
-    - pip
-    - MySQL-python
+    - mysql-python
+    - pymysql
 
 - name: Create MySQL databases
   mysql_db:
@@ -22,10 +21,16 @@
     login_password: ~
     name: "{{ item.db }}"
     password: "{{ item.db }}"
-    priv: "{{ item.db }}.*:ALL"
+    # priv: "{{ item.db }}.*:ALL"
     host: '%'
     state: present
   when: "item.db is defined"
+  loop: "{{ websites }}"
+
+- file:
+    path: "{{ item.path }}"
+    state: directory
+    mode: 0755
   loop: "{{ websites }}"
 
 - name: Download archives
@@ -38,7 +43,7 @@
 
 - name: Clone repos
   git:
-    src: "{{ item.git }}"
+    repo: "{{ item.git }}"
     dest: "{{ item.path }}"
   when: "item.git is defined"
   loop: "{{ websites }}"

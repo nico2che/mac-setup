@@ -12,8 +12,9 @@
       - name: mrsinge
         url: monsieursinge.local
         path: /Users/nicolas/projects/mrsinge
-        zip: git@github.com:nico2che/mrsinge.git
+        git: git@github.com:nico2che/mrsinge.git
         db: mrsinge
+        wordpress: true
   # environment:
   #   PYTHONPATH: "{{ lookup('env','PYTHONPATH') }}:/usr/local/lib/python2.7/dist-packages:/usr/local/lib/python2.7/site-packages"
   roles:
