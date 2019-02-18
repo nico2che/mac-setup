@@ -5,19 +5,17 @@ general:
 
 # homebrew applications
 homebrew:
-  - autojump
   - git
+  - node
+  - zsh
+  - curl
+  - autojump
   - tree
   - httpie
-  - curl
   - wget
-  - kubectl
-  - kubernetes-helm
-  - zsh
   - go
   - vim
   - neovim
-  - node
   - yadm
   - mkcert
   - mongodb
@@ -31,7 +29,5 @@ homebrew:
   - nmap
 
 # npm global packages
-# - npm
-# - { name: npm, state: present, version: "^4.0.0" }
 npm:
   - git-open
