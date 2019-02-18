@@ -25,7 +25,9 @@ environments type
 
 ## Coming
 
-- aerial save screener
+- add essential installation step, before install all extras stuff to be quickly in
+- add interactive options at start of bash install script (perso, pro, essential step...)
 - google drive auto connexion, and sync some files
+- some custom settings
 
 Inspired from https://github.com/geerlingguy/mac-dev-playbook
