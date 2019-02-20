@@ -3,8 +3,10 @@
   pip:
     name: "{{ item }}"
   with_items:
-    - mysql-python
     - pymysql
+
+- name: Enable MySQL services
+  command: brew services start mysql
 
 - name: Create MySQL databases
   mysql_db:
@@ -22,28 +24,7 @@
     name: "{{ item.db }}"
     password: "{{ item.db }}"
     # priv: "{{ item.db }}.*:ALL"
-    host: '%'
+    host: "%"
     state: present
   when: "item.db is defined"
-  loop: "{{ websites }}"
-
-- file:
-    path: "{{ item.path }}"
-    state: directory
-    mode: 0755
-  loop: "{{ websites }}"
-
-- name: Download archives
-  unarchive:
-    src: "{{ item.zip }}"
-    dest: "{{ item.path }}"
-    remote_src: yes
-  when: "item.zip is defined"
-  loop: "{{ websites }}"
-
-- name: Clone repos
-  git:
-    repo: "{{ item.git }}"
-    dest: "{{ item.path }}"
-  when: "item.git is defined"
   loop: "{{ websites }}"

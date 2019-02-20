@@ -3,12 +3,12 @@
 
 - hosts: mac
   vars:
-    ssl_path: /Users/nicolas/Library/Application Support/mkcert
+    ssl_path: "/Users/nicolas/Library/Application Support/mkcert"
     websites:
       - name: phpmyadmin
         url: phpmyadmin.local
         path: /Users/nicolas/projects/phpmyadmin
-        zip: https://files.phpmyadmin.net/phpMyAdmin/4.8.4/phpMyAdmin-4.8.4-english.zip
+        zip: https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-english.zip
       - name: mrsinge
         url: monsieursinge.local
         path: /Users/nicolas/projects/mrsinge
@@ -19,6 +19,6 @@
   #   PYTHONPATH: "{{ lookup('env','PYTHONPATH') }}:/usr/local/lib/python2.7/dist-packages:/usr/local/lib/python2.7/site-packages"
   roles:
     - role: web
-      tags: ['docker']
+      tags: ["docker"]
     - role: web_local
-      tags: ['local']
+      tags: ["local"]

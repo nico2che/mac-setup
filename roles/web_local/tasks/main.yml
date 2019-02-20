@@ -21,6 +21,9 @@
   become: true
   shell: brew services restart nginx
 
+- name: Deploy apps
+  include: apps.yml
+
 - name: Install DBs and PMA
   include: db.yml
 
