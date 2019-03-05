@@ -8,13 +8,17 @@
       - name: phpmyadmin
         url: phpmyadmin.local
         path: /Users/nicolas/projects/phpmyadmin
-        zip: https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-english.zip
       - name: mrsinge
         url: monsieursinge.local
         path: /Users/nicolas/projects/mrsinge
         git: git@github.com:nico2che/mrsinge.git
         db: mrsinge
         wordpress: true
+      - name: comptoir
+        url: comptoir.local
+        path: /Users/nicolas/projects/comptoir
+        git: git@github.com:nico2che/comptoir-api.git
+        db: comptoir
   # environment:
   #   PYTHONPATH: "{{ lookup('env','PYTHONPATH') }}:/usr/local/lib/python2.7/dist-packages:/usr/local/lib/python2.7/site-packages"
   roles:

@@ -5,15 +5,6 @@
     mode: 0755
   loop: "{{ websites }}"
 
-- name: Download archives
-  unarchive:
-    src: "{{ item.zip }}"
-    dest: "{{ item.path }}"
-    remote_src: yes
-    extra_opts: ["--strip-components=1"]
-  when: "item.zip is defined"
-  loop: "{{ websites }}"
-
 - name: Clone repos
   git:
     repo: "{{ item.git }}"
