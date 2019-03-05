@@ -2,11 +2,12 @@
 - name: Install MySQL-Python module
   pip:
     name: "{{ item }}"
+    state: present
   with_items:
     - pymysql
 
 - name: Enable MySQL services
-  command: brew services start mysql
+  shell: mysql.server start && brew services start mariadb
 
 - name: Create MySQL databases
   mysql_db:
@@ -23,8 +24,28 @@
     login_password: ~
     name: "{{ item.db }}"
     password: "{{ item.db }}"
-    # priv: "{{ item.db }}.*:ALL"
-    host: "%"
+    priv: "{{ item.db }}.*:ALL,GRANT"
+    host: "localhost"
     state: present
   when: "item.db is defined"
   loop: "{{ websites }}"
+
+- name: Delete phpMyAdmin folder
+  file:
+    path: /Users/nicolas/projects/phpmyadmin
+    state: absent
+
+- name: Download and unarchive phpMyAdmin
+  unarchive:
+    src: https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-all-languages.zip
+    dest: /Users/nicolas/projects
+    remote_src: yes
+
+- name: Move downloaded phpMyAdmin folder
+  command: mv /Users/nicolas/projects/phpMyAdmin-4.8.5-all-languages /Users/nicolas/projects/phpmyadmin
+
+- name: Copy configuration file from sample
+  copy:
+    src: /Users/nicolas/projects/phpmyadmin/config.sample.inc.php
+    dest: /Users/nicolas/projects/phpmyadmin/config.inc.php
+    remote_src: yes
