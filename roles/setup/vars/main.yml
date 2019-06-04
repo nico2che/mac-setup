@@ -27,6 +27,7 @@ homebrew:
   - fd
   - htop
   - nmap
+  - yarn
 
 # npm global packages
 npm:
