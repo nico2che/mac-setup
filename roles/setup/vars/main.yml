@@ -28,6 +28,7 @@ homebrew:
   - htop
   - nmap
   - yarn
+  - mitmproxy
 
 # npm global packages
 npm:
