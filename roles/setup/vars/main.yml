@@ -18,7 +18,6 @@ homebrew:
   - neovim
   - yadm
   - mkcert
-  - mongodb
   - tig
   - maven
   - ripgrep
@@ -28,7 +27,6 @@ homebrew:
   - htop
   - nmap
   - yarn
-  - mitmproxy
 
 # npm global packages
 npm:
