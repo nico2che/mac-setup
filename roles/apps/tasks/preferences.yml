@@ -6,3 +6,9 @@
   copy:
     src: '{{ role_path }}/files/vscode-settings.json'
     dest: '~/Library/Application Support/Code/User/settings.json'
+    
+- name: Show battery percentage
+  shell: 'defaults write com.apple.menuextra.battery ShowPercent YES'
+
+- name: Restart topbar
+  shell: 'killall SystemUIServer'
