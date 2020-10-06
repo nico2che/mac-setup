@@ -5,9 +5,10 @@ general:
 
 # homebrew applications
 homebrew:
-  - java
   - git
+  - java
   - node
+  - yarn
   - zsh
   - curl
   - autojump
@@ -27,7 +28,7 @@ homebrew:
   - fd
   - htop
   - nmap
-  - yarn
+  - lporg
 
 # npm global packages
 npm:
