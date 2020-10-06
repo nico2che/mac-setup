@@ -9,23 +9,22 @@ cask_applications:
     - iterm2
     - google-backup-and-sync
     - visual-studio-code
-    - intellij-idea
     - hwsensors
     - onedrive
     - docker
     - postman
     - omnidisksweeper
     - vlc
-    - aerial
     - beardedspice
     - keka
   pro:
     - ngrok
     - skype
     - firefox-developer-edition
+    - slack
+    - sequel-pro
   perso:
     - android-studio
-    - filezilla
     - etcher
 
 downloads:
@@ -46,12 +45,12 @@ dock_applications:
       path: /Applications/Calendar.app
     - name: Visual Studio Code
       path: /Applications/Visual Studio Code.app
-    - name: IntelliJ IDEA
-      path: /Applications/IntelliJ IDEA.app
     - name: Postman
       path: /Applications/Postman.app
     - name: iTerm
       path: /Applications/iTerm.app
+    - name: Slack
+      path: /Applications/Slack.app
   perso:
     - name: Launchpad
       path: /Applications/Launchpad.app
