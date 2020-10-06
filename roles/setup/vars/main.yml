@@ -5,6 +5,7 @@ general:
 
 # homebrew applications
 homebrew:
+  - java
   - git
   - node
   - zsh
