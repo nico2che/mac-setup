@@ -1,14 +1,20 @@
 # Install Oh My Zsh
 ---
-- name: Download OMZSH script
-  get_url:
-    url: https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-    dest: /tmp
-    mode: +x
+- name: Check ZSH installation
+  stat:
+    path: /Users/nicolas/.oh-my-zsh
+  register: file_details
 
-- name: Install OMZSH
-  script: /tmp/install.sh
-  ignore_errors: yes
+- block:
+    - name: Download OMZSH script
+      get_url:
+        url: https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+        dest: /tmp
+        mode: +x
+
+    - name: Install OMZSH
+      script: /tmp/install.sh
+  when: not file_details.stat.exists
 
 - name: Remove OMZSH script
   file:
