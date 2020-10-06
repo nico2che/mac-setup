@@ -8,6 +8,7 @@
 
 - name: Install OMZSH
   script: /tmp/install.sh
+  ignore_errors: yes
 
 - name: Remove OMZSH script
   file:
