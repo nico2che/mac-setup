@@ -12,7 +12,6 @@ cask_applications:
     - intellij-idea
     - hwsensors
     - onedrive
-    - java
     - docker
     - postman
     - omnidisksweeper
