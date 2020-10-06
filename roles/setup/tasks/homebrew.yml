@@ -13,11 +13,6 @@
   homebrew_tap:
     tap: "homebrew/cask"
 
-- name: ensure java is installed
-  homebrew_cask:
-    name: java
-    state: installed
-
 - name: tap homebrew neovim/homebrew-neovim
   homebrew_tap:
     tap: "neovim/homebrew-neovim"
