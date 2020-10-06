@@ -17,7 +17,7 @@ if [ ! -d $installdir ]; then
     exit 1
 else
     cd $installdir 
-    ansible-playbook -i ./hosts playbook.yml --verbose
+    ansible-playbook -i ./hosts playbook.yml --verbose --tags=setup,apps,desktop -e 'perso=yes pro=yes'
 fi
 
 echo "cleaning up..."
