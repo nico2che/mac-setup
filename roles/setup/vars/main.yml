@@ -28,7 +28,7 @@ homebrew:
   - fd
   - htop
   - nmap
-  - lporg
+  - blacktop/tap/lporg
 
 # npm global packages
 npm:
