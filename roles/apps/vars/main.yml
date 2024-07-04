@@ -23,6 +23,13 @@ cask_applications:
   - devcleaner
   - stremio
   - nordvpn
+  - proxyman
+  - notion
+  - zoom
+  - mounty
+  - pdf-expert
+  - tunnelblick
+  - local
 
 dock_applications:
   - name: Launchpad

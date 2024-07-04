@@ -81,37 +81,30 @@ apps:
         - iTerm
         - Visual Studio Code
         - Docker
+        - TablePlus
         - Postman
-        - OmniDiskSweeper
         - Keka
         - Slack
         - Tunnelblick
         - Notion
-        - FileZilla
         - Local
         - Firefox
-        - Android Studio
-        - Android File Transfer
         - Proxyman
         - Cyberduck
-        - mpv
-        - ClickShare
         - zoom.us
-        - Mounty
+        - NordVPN
     - number: 3
       items:
-        - TablePlus
+        - Mounty
+        - Android File Transfer
+        - OmniDiskSweeper
+        - Android Studio
         - qBittorrent
-        - Windscribe
         - MonitorControl
         - Google Drive
-        - balenaEtcher
         - DevCleaner
-        - PDFgear
-        - Garmin Express
         - VLC
         - Stremio
-        - NordVPN
 widgets:
   pages: []
 dock_items:
