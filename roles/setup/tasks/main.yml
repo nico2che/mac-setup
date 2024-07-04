@@ -1,11 +1,11 @@
 - name: homebrew installation
-  include: homebrew.yml
+  include_tasks: homebrew.yml
 
 - name: npm installation
-  include: npm.yml
+  include_tasks: npm.yml
 
 - name: oh my zsh installation
-  include: oh-my-zsh.yml
+  include_tasks: oh-my-zsh.yml
 
 - name: dotfiles installation
-  include: dotfiles.yml
+  include_tasks: dotfiles.yml

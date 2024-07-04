@@ -1,14 +1,6 @@
-# Decide if we set pro or perso apps in dock
-# Pro apps are by default
-- name: Get perso apps
+- name: Set apps
   set_fact:
-    dock_apps: "{{ dock_applications.perso }}"
-  when: perso | default('no') | bool
-
-- name: Get pro apps
-  set_fact:
-    dock_apps: "{{ dock_applications.pro }}"
-  when: pro | default('no') | bool
+    dock_apps: "{{ dock_applications }}"
 
 - name: Ensure required tools
   homebrew:

@@ -14,19 +14,16 @@ These roles are dependants, so they need to be runned in this order only.
 
 When all roles was runned, you can start one independantly with a tag option.
 
-`ansible-playbook playbook.yml --tags=setup,apps,desktop -e 'perso=yes pro=yes'`
+`ansible-playbook playbook.yml --tags=setup,apps,desktop`
 
 - **setup** install homebrew & global npm packages
 - **apps** install mac applications and their preferences
 - **desktop** install global preferences
 
-`perso` and `pro` extra vars are available on playbook command to install these
-environments type
-
 ## Coming
 
 - add essential installation step, before install all extras stuff to be quickly in
-- add interactive options at start of bash install script (perso, pro, essential step...)
+- add interactive options at start of bash install script
 - google drive auto connexion, and sync some files
 - some custom settings
 

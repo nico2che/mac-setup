@@ -11,24 +11,14 @@ homebrew:
   - yarn
   - zsh
   - curl
-  - autojump
   - tree
-  - httpie
   - wget
   - go
   - vim
-  - neovim
-  - yadm
   - mkcert
-  - tig
   - maven
-  - ripgrep
-  - exa
-  - bat
-  - fd
   - htop
   - nmap
-  - blacktop/tap/lporg
 
 # npm global packages
 npm:
