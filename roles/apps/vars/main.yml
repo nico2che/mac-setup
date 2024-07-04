@@ -16,7 +16,7 @@ cask_applications:
   - vlc
   - keka
   - ngrok
-  - firefox-developer-edition
+  - firefox@developer-edition
   - android-studio
   - etcher
   - qbittorrent
