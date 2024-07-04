@@ -1,91 +1,140 @@
 apps:
   pages:
-  - number: 1
-    items:
-    - folder: Productivité
-      pages:
-      - number: 1
-        items:
+    - number: 1
+      items:
+        - App Store
         - Safari
+        - Mail
         - Contacts
         - Calendrier
         - Rappels
         - Notes
-        - Plans
-        - Messages
         - FaceTime
+        - Messages
+        - Plans
+        - Localiser
         - Photo Booth
         - Photos
-        - iMovie
-        - GarageBand
-        - Keynote
         - Aperçu
+        - Musique
+        - Podcasts
+        - TV
+        - Dictaphone
+        - Bourse
+        - Livres
         - Dictionnaire
+        - Calculette
+        - Maison
         - Siri
-        - iTunes
-        - iBooks
-        - Pages
-        - Numbers
         - Mission Control
-        - Dashboard
-    - folder: Autre
-      pages:
-      - number: 1
-        items:
-        - QuickTime Player
-        - TextEdit
-        - Grapher
-        - Lecteur DVD
-        - Time Machine
-        - Livre des polices
-        - Échecs
-        - Aide-mémoire
-        - Transfert d’images
-        - Utilitaire VoiceOver
-        - Utilitaire AirPort
-        - Assistant migration
-        - Terminal
-        - Moniteur d’activité
-        - Console
-        - Trousseaux d’accès
-        - Informations système
-        - Automator
-        - Éditeur de script
-        - Utilitaire de disque
-        - Assistant Boot Camp
-        - Colorimètre numérique
-        - Utilitaire ColorSync
-        - Capture
-        - Échange de fichiers Bluetooth
-        - Configuration audio et MIDI
-    - Mail
-    - Calculette
-    - App Store
-    - Préférences Système
-    - Google Chrome
-    - iTerm
-    - Docker
-    - IntelliJ IDEA
-    - Visual Studio Code
-    - Google Keep – Notes et listes
-    - Skype
-    - Postman
-    - OmniDiskSweeper
-    - VLC
-    - HWMonitor
-    - FileZilla
+        - Réglages Système
+        - folder: Autre
+          pages:
+            - number: 1
+              items:
+                - Raccourcis
+                - QuickTime Player
+                - TextEdit
+                - Grapher
+                - Time Machine
+                - Livre des polices
+                - Échecs
+                - Aide-mémoire
+                - Transfert d’images
+                - Utilitaire VoiceOver
+                - Utilitaire AirPort
+                - Assistant migration
+                - Terminal
+                - Moniteur d’activité
+                - Console
+                - Trousseaux d’accès
+                - Informations système
+                - Automator
+                - Éditeur de script
+                - Utilitaire de disque
+                - Assistant Boot Camp
+                - Colorimètre numérique
+                - Utilitaire ColorSync
+                - Capture d’écran
+                - Échange de fichiers Bluetooth
+                - Configuration audio et MIDI
+                - AdobeIPCBroker
+                - Creative Cloud Helper
+                - Creative Cloud
+                - Creative Cloud Desktop App
+                - Creative Cloud Installer
+                - CC Troubleshooter
+                - Core Sync
+                - CCXProcess
+                - Désinstaller Adobe Photoshop 2021
+            - number: 2
+              items:
+                - AdobeCleanUpUtility
+                - AdobeGCClient
+                - Partage d’écran
+                - Centre d’impression
+        - Météo
+        - Horloge
+    - number: 2
+      items:
+        - Google Chrome
+        - iTerm
+        - Visual Studio Code
+        - Docker
+        - Postman
+        - OmniDiskSweeper
+        - Keka
+        - Slack
+        - Tunnelblick
+        - Notion
+        - FileZilla
+        - Local
+        - Firefox
+        - Android Studio
+        - Android File Transfer
+        - Proxyman
+        - Cyberduck
+        - mpv
+        - ClickShare
+        - zoom.us
+        - Mounty
+    - number: 3
+      items:
+        - TablePlus
+        - qBittorrent
+        - Windscribe
+        - MonitorControl
+        - Google Drive
+        - balenaEtcher
+        - DevCleaner
+        - PDFgear
+        - Garmin Express
+        - VLC
+        - Stremio
+        - NordVPN
 widgets:
   pages: []
 dock_items:
-- Launchpad
-- Google Chrome
-- Mail
-- Calendrier
-- Visual Studio Code
-- IntelliJ IDEA
-- App Store
-- Préférences Système
-- iTerm
-- ============
-- Téléchargements
+  apps:
+    - /System/Applications/Launchpad.app
+    - /System/Applications/System Settings.app
+    - /Applications/Google Chrome.app
+    - /System/Applications/Calendar.app
+    - /Applications/Visual Studio Code.app
+    - /Applications/iTerm.app
+    - /Applications/Slack.app
+    - /Applications/TablePlus.app
+    - /Applications/Postman.app
+  others:
+    - path: ~/Downloads
+      view: 1
+      sort: 4
+  settings:
+    autohide: false
+    largesize: 58
+    magnification: true
+    minimize-to-application: false
+    mru-spaces: false
+    show-recents: false
+    tilesize: 67
 desktop: {}

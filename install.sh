@@ -4,8 +4,11 @@ echo "==========================================="
 echo "===          Setting up Mac             ==="
 echo "==========================================="
 
-sudo easy_install pip
-sudo pip install ansible
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$(whoami)/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+brew install ansible
 
 installdir="/tmp/setupmac-$RANDOM"
 mkdir $installdir
@@ -17,7 +20,7 @@ if [ ! -d $installdir ]; then
     exit 1
 else
     cd $installdir 
-    ansible-playbook -i ./hosts playbook.yml --verbose --tags=setup,apps,desktop -e 'pro=yes'
+    ansible-playbook -i ./hosts playbook.yml --verbose
 fi
 
 echo "cleaning up..."
