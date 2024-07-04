@@ -11,7 +11,7 @@ cask_applications:
   - google-drive
   - docker
   - postman
-  - table-plus
+  - tableplus
   - omnidisksweeper
   - vlc
   - keka
