@@ -19,7 +19,6 @@ homebrew:
   - maven
   - htop
   - nmap
-  - blacktop/tap/lporg
 
 # npm global packages
 npm:

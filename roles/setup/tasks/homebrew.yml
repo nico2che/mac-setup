@@ -3,3 +3,5 @@
   homebrew:
     name: "{{ homebrew }}"
     state: latest
+
+- shell: brew install blacktop/tap/lporg
