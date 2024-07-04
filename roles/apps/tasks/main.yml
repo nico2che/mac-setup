@@ -1,7 +1,6 @@
 - name: Install applications
   include_tasks: apps.yml
-
-- name: Configure applications
-  include_tasks: preferences.yml
+# - name: Configure applications
+#   include_tasks: preferences.yml
 # - name: Configure Dock
 #   include_tasks: dock.yml
