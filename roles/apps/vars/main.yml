@@ -22,7 +22,6 @@ cask_applications:
   - qbittorrent
   - monitorcontrol
   - devcleaner
-  - garmin-express
   - stremio
   - nordvpn
 
