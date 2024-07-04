@@ -18,7 +18,6 @@ cask_applications:
   - ngrok
   - firefox@developer-edition
   - android-studio
-  - etcher
   - qbittorrent
   - monitorcontrol
   - devcleaner
